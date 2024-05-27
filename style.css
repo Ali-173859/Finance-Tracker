@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #FFA07A, #FF6347); /* Gradient background */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.8s ease-out forwards; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inpu_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inpu_box input {
+    padding: 12px;
+    width: 180px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 30px; /* Rounded input fields */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.inpu_box input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter background on focus */
+    transform: translateY(-2px);
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+button {
+    padding: 12px 40px; /* Increased padding */
+    background-color: #FF6347; /* Coral color */
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF4500; /* Darker coral color on hover */
+    transform: translateY(-2px);
+}
+
+/* Animation for savings result */
+#savingsResult {
+    opacity: 0;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
